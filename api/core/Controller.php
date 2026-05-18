@@ -2,8 +2,6 @@
 
 namespace api\core;
 
-use api\models\Users;
-
 class Controller{
 
   public function model($model){
