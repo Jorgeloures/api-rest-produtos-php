@@ -8,6 +8,7 @@
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Nome</th>
+              <th colspan="2">Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -15,6 +16,12 @@
             <tr>
               <td><?= $product['id'] ?></td>
               <td><?= $product['nome'] ?></td>
+              <td>
+                <a href="<?= BASE_URL ?>/product/edit/<?= $product['id'] ?>">Editar</a>
+              </td>
+              <td>
+                <a href="<?= BASE_URL ?>/product/delete/<?= $product['id'] ?>">Excluir</a>
+              </td>
             </tr>
             <?php }?>
           </tbody>

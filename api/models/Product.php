@@ -19,7 +19,43 @@ class Product{
       ':ID' => $id
     ));
 
-    return $result->fetchAll(PDO::FETCH_ASSOC);
+    return $result->fetch(PDO::FETCH_ASSOC);
+  }
+
+  public static function updateById(int $id, array $data){
+
+    $conn = new Database();
+
+    return $conn->executeQuery(
+      'UPDATE produtos 
+       SET 
+          nome = :NOME,
+          descricao = :DESCRICAO,
+          preco = :PRECO,
+          estoque = :ESTOQUE,
+          categoria_id = :CATEGORIA_ID
+       WHERE id = :ID',
+      array(
+        ':NOME' => $data['nome'],
+        ':DESCRICAO' => $data['descricao'],
+        ':PRECO' => $data['preco'],
+        ':ESTOQUE' => $data['estoque'],
+        ':CATEGORIA_ID' => $data['categoria_id'],
+        ':ID' => $id
+      )
+    );
+  }
+
+   public static function deleteById(int $id){
+
+    $conn = new Database();
+
+    return $conn->executeQuery(
+      'DELETE FROM produtos WHERE id = :ID',
+      array(
+        ':ID' => $id
+      )
+    );
   }
 
 }

@@ -11,9 +11,11 @@ class Controller{
     $classe = 'api\\models\\' . $model;
     return new $classe();
   }
-  
-  public function view(string $view, $data = []){
-    require 'api/views/' . $view . '.php';
+
+  public function view($view, $data = []){
+    extract($data);
+
+    require_once "api/views/$view.php";
   }
 
   public function pageNotFound(){
