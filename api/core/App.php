@@ -1,7 +1,6 @@
 <?php
 
-namespace Application\core;
-
+namespace api\core;
 
 class App{
   protected $controller = 'Home';
@@ -20,21 +19,28 @@ class App{
   }
 
   private function parseUrl(){
-    $REQUEST_URI = explode('/', substr(filter_input(INPUT_SERVER, 'REQUEST_URI'), 1));
-    return $REQUEST_URI;
+    $url = filter_input(INPUT_GET, 'url');
+
+    if(isset($url)){
+      $url = trim($url, '/');
+      $url = explode('/', $url);
+      return $url;
+    }
+
+    return [];
   }
 
   
   private function getControllerFromUrl($url){
     if ( !empty($url[0]) && isset($url[0]) ) {
-      if ( file_exists('../Application/controllers/' . ucfirst($url[0])  . '.php') ) {
+      if ( file_exists('api/controllers/' . ucfirst($url[0])  . '.php') ) {
         $this->controller = ucfirst($url[0]);
       } else {
         $this->page404 = true;
       }
     }
 
-    require '../Application/controllers/' . $this->controller . '.php';
+    require 'api/controllers/' . $this->controller . '.php';
     $this->controller = new $this->controller();
 
   }

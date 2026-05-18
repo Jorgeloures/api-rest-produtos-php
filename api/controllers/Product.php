@@ -1,6 +1,6 @@
 <?php
 
-use Application\core\Controller;
+use api\core\Controller;
 
 class Product extends Controller{
   

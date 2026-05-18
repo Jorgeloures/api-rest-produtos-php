@@ -1,14 +1,13 @@
 <?php
 
-spl_autoload_register(function ($filename) {
-  $file = '..' . DIRECTORY_SEPARATOR . $filename . '.php';
-  if ( DIRECTORY_SEPARATOR === '/' ):
-    $file = str_replace('\\', '/', $file);
-  endif;
+spl_autoload_register(function ($class){
 
-  if ( file_exists($file) ):
-    require $file;
-  else:
-    echo 'Erro ao importar o arquivo!' ;
-  endif;
+    $file = __DIR__ . '/../' . str_replace('\\', '/', $class) . '.php';
+
+    if(file_exists($file)){
+        require_once $file;
+    } else {
+        die("Erro ao importar o arquivo!<br>$file");
+    }
+
 });

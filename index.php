@@ -8,10 +8,11 @@
   <body>
 
   <?php
-    require '../Application/autoload.php';
-
-    use Application\core\App;
-    use Application\core\Controller;
+    require 'api/autoload.php';
+    define('BASE_URL', 'http://localhost/API-REST-PRODUTOS-PHP');
+    
+    use api\core\App;
+    use api\core\Controller;
 
     $app = new App();
 

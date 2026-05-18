@@ -14,7 +14,7 @@
             <?php foreach ($data['product'] as $product) { ?>
             <tr>
               <td><?= $product['id'] ?></td>
-              <td><?= $product['name'] ?></td>
+              <td><?= $product['nome'] ?></td>
             </tr>
             <?php }?>
           </tbody>

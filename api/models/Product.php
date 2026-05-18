@@ -1,10 +1,10 @@
 <?php
 
-namespace Application\models;
+namespace api\models;
 
-use Application\core\Database;
+use api\core\Database;
 use PDO;
-class Products{
+class Product{
  
   public static function findAll(){
     $conn = new Database();
@@ -15,7 +15,7 @@ class Products{
  
   public static function findById(int $id){
     $conn = new Database();
-    $result = $conn->executeQuery('SELECT * FROM users WHERE id = :ID LIMIT 1', array(
+    $result = $conn->executeQuery('SELECT * FROM produtos WHERE id = :ID LIMIT 1', array(
       ':ID' => $id
     ));
 

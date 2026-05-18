@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\core;
+namespace api\core;
 
 use PDO;
 class Database extends PDO
@@ -10,13 +10,16 @@ class Database extends PDO
   private $DB_USER = 'root';
   private $DB_PASSWORD = '';
   private $DB_HOST = 'localhost';
-  private $DB_PORT = 5432;
 
   // armazena a conexão
   private $conn;
 
   public function __construct(){
-    $this->conn = new PDO("pgsql:dbname=$this->DB_NAME;host=$this->DB_HOST;port=$this->DB_PORT;user=$this->DB_USER;password=$this->DB_PASSWORD");
+    $this->conn = new PDO(
+            "mysql:host={$this->DB_HOST};dbname={$this->DB_NAME};charset=utf8;",
+            $this->DB_USER,
+            $this->DB_PASSWORD
+        );
   }
 
   

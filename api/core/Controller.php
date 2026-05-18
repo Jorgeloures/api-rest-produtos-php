@@ -1,19 +1,19 @@
 <?php
 
-namespace Application\core;
+namespace api\core;
 
-use Application\models\Users;
+use api\models\Users;
 
 class Controller{
 
   public function model($model){
-    require '../Application/models/' . $model . '.php';
-    $classe = 'Application\\models\\' . $model;
+    require 'api/models/' . $model . '.php';
+    $classe = 'api\\models\\' . $model;
     return new $classe();
   }
   
   public function view(string $view, $data = []){
-    require '../Application/views/' . $view . '.php';
+    require 'api/views/' . $view . '.php';
   }
 
   public function pageNotFound(){
