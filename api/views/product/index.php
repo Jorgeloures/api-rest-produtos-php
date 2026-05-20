@@ -20,7 +20,10 @@
                 <a href="<?= BASE_URL ?>/product/edit/<?= $product['id'] ?>">Editar</a>
               </td>
               <td>
-                <a href="<?= BASE_URL ?>/product/delete/<?= $product['id'] ?>">Excluir</a>
+                <a 
+                href="<?= BASE_URL ?>/product/delete/<?= $product['id'] ?>"
+                onclick="return confirm('Deseja excluir este produto?')">Excluir
+                </a>
               </td>
             </tr>
             <?php }?>
