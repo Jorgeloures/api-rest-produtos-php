@@ -1,36 +1,70 @@
-<h1>Editar Produto</h1>
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2" style="margin-top:30px">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          
+        <h2>Editar Produtos</h2>
+        </div>
+        <form method="POST">
+          <div class="mb-3">
+            <label class="form-label">Nome do Produto:</label>
 
-<form method="POST">
+            <input 
+              type="text" 
+              name="nome"
+              class="form-control"
+              value="<?= $product['nome'] ?>" >
+          </div>
 
-  <input 
-    type="text" 
-    name="nome"
-    value="<?= $product['nome'] ?>"
-  >
+          <div class="mb-3">
+            <label class="form-label">Descrição:</label>
 
-  <textarea name="descricao"><?= $product['descricao'] ?></textarea>
+            <textarea 
+              name="descricao"
+              class="form-control"
+              rows="4"
+            ><?= $product['descricao'] ?></textarea>
+          </div>
 
-  <input 
-    type="number"
-    step="0.01"
-    name="preco"
-    value="<?= $product['preco'] ?>"
-  >
+          <div class="mb-3">
+            <label class="form-label">Preço:</label>
 
-  <input 
-    type="number"
-    name="estoque"
-    value="<?= $product['estoque'] ?>"
-  >
+            <input 
+              type="number"
+              step="0.01"
+              name="preco"
+              class="form-control"
+              value="<?= $product['preco'] ?>" >
+          </div>
 
-  <input 
-    type="number"
-    name="categoria_id"
-    value="<?= $product['categoria_id'] ?>"
-  >
+          <div class="mb-3">
+            <label class="form-label">Estoque:</label>
 
-  <button type="submit">
-    Salvar
-  </button>
+            <input 
+              type="number"
+              name="estoque"
+              class="form-control"
+              value="<?= $product['estoque'] ?>" >
+          </div>
 
-</form>
+          <div class="mb-3">
+            <label class="form-label">Categoria:</label>
+
+            <input 
+              type="number"
+              name="categoria_id"
+              class="form-control"
+              value="<?= $product['categoria_id'] ?>" >
+          </div>
+
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary"> Salvar Edição </button>
+            <a href="<?= BASE_URL ?>/product" class="btn btn-primary"> Voltar </a>
+
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
