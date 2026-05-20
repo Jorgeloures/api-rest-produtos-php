@@ -8,7 +8,7 @@
       <div class="d-flex flex-column align-items-center">
         <a href="<?= BASE_URL . '/product' ?>" class="btn btn-primary" style="width:400px; padding:15px; font-size:18px; margin-bottom:20px;" > LISTAR PRODUTOS </a>
 
-        <a href="<?= BASE_URL . '/categoria' ?>" class="btn btn-primary" style="width:400px; padding:15px; font-size:18px;" > LISTAR CATEGORIAS </a> 
+        <a href="<?= BASE_URL . '/category' ?>" class="btn btn-primary" style="width:400px; padding:15px; font-size:18px;" > LISTAR CATEGORIAS </a> 
       </div>
     </div>
   </div>
