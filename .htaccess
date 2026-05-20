@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /API-REST-PRODUTOS-PHP/
+RewriteBase /projetos_github/API-REST-PRODUTOS-PHP/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
