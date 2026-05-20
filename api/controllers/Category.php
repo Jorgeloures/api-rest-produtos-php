@@ -1,7 +1,5 @@
 <?php
-
 use api\core\Controller;
-
 class Category extends Controller{
   
   public function index(){
@@ -15,19 +13,17 @@ class Category extends Controller{
       $Category = $this->model('Category');
       $data = $Category::findById($id);
       $this->view('categorias/show', ['category' => $data]);
-
     } else {
       $this->pageNotFound();
     }
   }
-
 
   public function edit($id = null){
     if (is_numeric($id)) {
       $Category = $this->model('Category');
       if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $Category::updateById($id, $_POST);
-        header('Location: ' . BASE_URL . '/categorias');
+        header('Location: ' . BASE_URL . '/category');
         exit;
       }
 
@@ -42,7 +38,7 @@ class Category extends Controller{
     if (is_numeric($id)) {
       $Category = $this->model('Category');
       $Category::deleteById($id);
-      header('Location: ' . BASE_URL . '/categorias');
+      header('Location: ' . BASE_URL . '/category');
     } else {
       $this->pageNotFound();
     }

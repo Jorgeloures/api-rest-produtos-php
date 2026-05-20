@@ -23,11 +23,11 @@
               <td><?= $category['nome'] ?></td>
               
               <td>              
-              <a href="<?= BASE_URL ?>/categorias/edit/<?= $category['id'] ?>"> Editar </a>
+              <a href="<?= BASE_URL ?>/category/edit/<?= $category['id'] ?>"> Editar </a>
               </td>
 
               <td>
-                <a href="<?= BASE_URL ?>/categorias/delete/<?= $category['id'] ?>"                  onclick="return confirm('Deseja excluir esta categoria?')" > Excluir </a>
+                <a href="<?= BASE_URL ?>/category/delete/<?= $category['id'] ?>"                  onclick="return confirm('Deseja excluir esta categoria?')" > Excluir </a>
               </td>
             </tr>
             <?php }?>
