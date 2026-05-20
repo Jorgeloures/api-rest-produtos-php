@@ -1,8 +1,11 @@
 <main>
   <div class="container">
     <div class="row">
-      <div class="col-8 offset-2" style="margin-top:100px">
-        <h2>Produtos</h2>
+      <div class="col-8 offset-2" style="margin-top:100px">      
+          <div class="d-flex justify-content-between align-items-center mb-3">
+              <h2>Produtos</h2> <a href="<?= BASE_URL ?>" class="btn btn-primary"> Página Principal </a>
+          </div>
+
         <table class="table">
           <thead>
             <tr>
