@@ -42,4 +42,14 @@ public function delete($id = null){
     $this->pageNotFound();
   }
 }
+
+public function create(){
+  $Product = $this->model('Product');
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $Product::create($_POST);
+    header('Location: ' . BASE_URL . '/product');
+    exit;
+  }
+  $this->view('product/incluir');
+}
 }
