@@ -43,4 +43,15 @@ class Category extends Controller{
       $this->pageNotFound();
     }
   }
+
+  public function create(){
+  $Category = $this->model('Category');
+  if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $Category::create($_POST);
+    header('Location: ' . BASE_URL . '/category');
+    exit;
+  }
+  $this->view('categorias/incluir');
+}
+
 }

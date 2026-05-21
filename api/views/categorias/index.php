@@ -4,6 +4,7 @@
       <div class="col-8 offset-2" style="margin-top:30px">
         <div class="d-flex justify-content-between align-items-center mb-3">
           <h2>Categorias</h2>
+          <a href="<?= BASE_URL ?>/category/create" class="btn btn-success"> Incluir Categoria </a>
           <a href="<?= BASE_URL ?>" class="btn btn-primary"> Página Principal </a>
         </div>
 
