@@ -3,7 +3,9 @@
     <div class="row">
       <div class="col-8 offset-2" style="margin-top:30px">      
           <div class="d-flex justify-content-between align-items-center mb-3">
-              <h2>Produtos</h2> <a href="<?= BASE_URL ?>" class="btn btn-primary"> Página Principal </a>
+              <h2>Produtos</h2> 
+              <a href="<?= BASE_URL ?>/product/create" class="btn btn-success"> Incluir Produto </a>
+              <a href="<?= BASE_URL ?>" class="btn btn-primary"> Página Principal </a>
           </div>
 
         <table class="table">
@@ -11,7 +13,7 @@
             <tr>
               <th scope="col">ID</th>
               <th scope="col">Nome</th>
-              <th colspan="2">Ações</th>
+              <th colspan="3">Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -19,12 +21,10 @@
             <tr>
               <td><?= $product['id'] ?></td>
               <td><?= $product['nome'] ?></td>
-              <td>
-                <a href="<?= BASE_URL ?>/product/edit/<?= $product['id'] ?>">Editar</a>
-              </td>
-              <td>
-                <a 
-                href="<?= BASE_URL ?>/product/delete/<?= $product['id'] ?>"
+
+              <td> <a href="<?= BASE_URL ?>/product/show/<?= $product['id'] ?>"> Visualizar </a></td>
+              <td> <a href="<?= BASE_URL ?>/product/edit/<?= $product['id'] ?>">Editar</a></td>
+              <td> <a href="<?= BASE_URL ?>/product/delete/<?= $product['id'] ?>"
                 onclick="return confirm('Deseja excluir este produto?')">Excluir
                 </a>
               </td>
