@@ -1,13 +1,11 @@
 <main>
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2" style="margin-top:30px">
+    <div class="dashboard-box">
         <div class="d-flex justify-content-between align-items-center mb-3">
-          <h2>Usuários</h2>
+          <h2><i class="bi bi-people"> </i> - Usuários</h2>
           <a href="<?= BASE_URL ?>/User/create" class="btn btn-success">Incluir Usuário</a>
-          <a href="<?= BASE_URL ?>" class="btn btn-primary"> Página Principal </a>
         </div>
 
+        <div class="table-scroll">
         <table class="table">
           <thead>
             <tr>
@@ -26,15 +24,13 @@
 
               <td><a href="<?= BASE_URL ?>/User/show/<?= $usuario['id'] ?>"> Visualizar </a></td>
               <td><a href="<?= BASE_URL ?>/User/edit/<?= $usuario['id'] ?>"> Editar </a></td>
-
               <td><a href="<?= BASE_URL ?>/User/delete/<?= $usuario['id'] ?>"
-                  onclick="return confirm('Deseja excluir este usuário?')" > Excluir </a></td>
+                onclick="return confirm('Deseja excluir este usuário?')" > Excluir </a></td>
             </tr>
 
             <?php } ?>
           </tbody>
         </table>
       </div>
-    </div>
-  </div>
+      </div>
 </main>

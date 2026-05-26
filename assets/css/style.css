@@ -1,0 +1,24 @@
+body{margin:0;padding:0;font-family:'Poppins', sans-serif;overflow-x:hidden;}
+
+/* MENU LATERAL */
+.sidebar{width:250px;min-height:100vh;background:#6975e7;padding:30px;}
+.sidebar-title{color:white;font-size:25px;font-weight:bold;line-height:1.2;margin-bottom:80px;  text-align:center;}
+
+.menu-link{color:white;text-decoration:none;font-size:20px;margin-bottom:25px;transition:0.3s;}
+.menu-link:hover{color:#dfeedd;padding-left:10px;}
+
+/* CONTEÚDO PRINCIPAL */
+.main-content{flex:1;min-height:100vh;background-image:url('../img/fundo.png');background-size:cover;  background-position:center;padding:40px;}
+
+/* CAIXA CENTRAL */
+.dashboard-box{border:1px solid black;font-size:17px;background:#eeebeb;border-radius:25px;padding:35px;box-shadow:0 5px 15px rgba(0,0,0,0.10);}
+
+.dashboard-title{font-size:35px;font-weight:bold;color:#2d4730;margin-bottom:30px;text-transform:uppercase;  text-align:center;}
+.dashboard-text{font-size:18px;color:#333;line-height:1.6;text-align:center;}
+
+.table{background:#eeebeb;}
+.table th,
+.table td{background:#eeebeb !important;font-size:15px;}
+.table-scroll{max-height:500px;overflow-y:auto;}
+
+.form-control:disabled{background-color:#fafbdb;color:#000;}

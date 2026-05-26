@@ -1,8 +1,5 @@
 <main>
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2" style="margin-top:30px">
-
+  <div class="dashboard-box">
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h2>Editar Usuário</h2>
         </div><form method="POST">
@@ -42,7 +39,5 @@
           </div>
 
         </form>
-      </div>
-    </div>
   </div>
 </main>
