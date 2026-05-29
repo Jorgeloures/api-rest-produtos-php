@@ -23,13 +23,13 @@
     <div class="sidebar d-flex flex-column justify-content-between">
       <div>
         <h1 class="sidebar-title">
-          TELA<br>PRINCIPAL
+          CONTROLE<br>FINANCEIRO
         </h1>
         <div class="d-flex flex-column">
         <a href="<?= BASE_URL ?>" class="menu-link"><i class="bi bi-speedometer2"> </i> - Dashboard</a>        
         <a href="<?= BASE_URL ?>/product" class="menu-link"><i class="bi bi-box-seam"> </i> - Produtos</a>
         <a href="<?= BASE_URL ?>/category" class="menu-link"><i class="bi bi-tags"> </i> - Categorias</a>
-        <a href="<?= BASE_URL ?>/user" class="menu-link"><i class="bi bi-people"> </i> - Usuários</a>
+        <a href="<?= BASE_URL ?>/user" class="menu-link"><i class="bi bi-people"> </i> - Clientes</a>
         </div>
       </div>
     </div>

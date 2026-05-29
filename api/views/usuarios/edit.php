@@ -1,7 +1,7 @@
 <main>
   <div class="dashboard-box">
         <div class="d-flex justify-content-between align-items-center mb-4">
-          <h2>Editar Usuário</h2>
+          <h2><i class="bi bi-pencil-square" style="color:#dc3545;font-size:35px;"></i> Editar Cliente</h2>
         </div><form method="POST">
           <div class="mb-3">
             <label class="form-label">ID:</label>

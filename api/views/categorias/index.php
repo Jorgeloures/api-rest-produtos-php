@@ -1,8 +1,8 @@
 <main>
 <div class="dashboard-box">
         <div class="d-flex justify-content-between align-items-center mb-3">
-          <h2><i class="bi bi-tags"> </i> - Categorias</h2>
-          <a href="<?= BASE_URL ?>/category/create" class="btn btn-success"> Incluir Categoria </a>
+          <h2><i class="bi bi-tags" style="color:#dc3545;font-size:35px;"> </i> Categorias</h2>
+          <a href="<?= BASE_URL ?>/category/create" class="btn btn-primary"> Incluir Categoria </a>
           </div>
 
         <div class="table-scroll">

@@ -1,6 +1,6 @@
 <div class="dashboard-box">
   <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2>Incluir Produto</h2>
+    <h2><i class="bi bi-database-add" style="color:#dc3545;font-size:35px;"></i> Incluir Produto</h2>
   </div>
 <form method="POST">
     <div class="row">
@@ -36,7 +36,7 @@
 
 
     <div class="mt-4">
-      <button type="submit" class="btn btn-success">Salvar Produto</button>
+      <button type="submit" class="btn btn-primary">Salvar Produto</button>
       <a href="<?= BASE_URL ?>/product" class="btn btn-primary">Voltar</a>
     </div>
   </form>

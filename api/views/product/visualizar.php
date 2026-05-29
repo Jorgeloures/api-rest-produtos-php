@@ -2,7 +2,7 @@
 <div class="dashboard-box">
         <div class="d-flex justify-content-between align-items-center mb-4">
           
-          <h2>Visualizar Produtos</h2>
+          <h2><i class="bi bi-search" style="color:#dc3545;font-size:35px;"></i> Visualizar Produtos</h2>
         </div>
 
         <form>
